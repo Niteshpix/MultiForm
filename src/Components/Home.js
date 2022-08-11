@@ -7,7 +7,6 @@ function Home() {
   return (
     <Box className='App'>
     <h1>Welcome to Jobeefy</h1>
-  
     <Button variant="contained">Apply Here !!</Button>
 
     </Box>
