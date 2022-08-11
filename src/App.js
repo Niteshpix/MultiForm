@@ -1,10 +1,17 @@
-
+import { Container } from '@mui/system';
 import './App.css';
+
+import Information from './Components/Information';
 
 function App() {
   return (
     <>
-    <h1>App Page</h1>
+    <Container>
+ 
+    <Information/>
+    </Container>
+ 
+    
     </>
   );
 }
