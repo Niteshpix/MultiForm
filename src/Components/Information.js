@@ -1,5 +1,7 @@
 import { Box, Grid, TextField } from '@mui/material'
+
 import React from 'react'
+
 
 function Information() {
   return (
@@ -11,6 +13,7 @@ function Information() {
             </Grid>
             <Grid item xs={12} md={6} >
                 <TextField label="LastName"></TextField>
+           
             </Grid>
         </Grid>
         </Box>
