@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import AddressInfo from "../Components/AddressInfo";
 import Educationinfo from "../Components/Educationinfo";
 import Information from "../Components/Information";
 import '../App.css'
@@ -8,29 +7,29 @@ import '../App.css'
 function UserForm() {
   const [page, setPage] = useState(0);
   const [valid, setValid] = useState();
+
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
-    confirmPassword: "",
     firstName: "",
     lastName: "",
-    username: "",
-    nationality: "",
-    other: "",
-    
+    email: "",
+    gender:'',
+    phone: "",
+    college:"",
+    Qualification:"",
+    Country:"",
+    State:"",
+    City:""
+
   });
 
-  const FormTitles = ["Personal Information !!", "Education !!","Address !!", "Preview !!"];
+  const FormTitles = ["Personal Information !!", "Education !!", "Preview !!"];
 
   const PageDisplay = () => {
     if (page === 0) {
       return <Information valid={valid} setValid={setValid} formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
       return <Educationinfo formData={formData} setFormData={setFormData} />;
-    } else if(page === 2){
-      return <AddressInfo formData={formData} setFormData={setFormData} />;
-    }
-   
+    } 
   };
 
   return (
@@ -49,8 +48,8 @@ function UserForm() {
         </div>
         <div className="body">{PageDisplay()}</div>
        
-        <div className="footer" style={{ margin:"2rem", padding:"2rem"}}>
-          <button style={{  padding:"0.5rem"}}
+        <div className="footer">
+          <button
             disabled={page === 0}
             onClick={() => {
               setPage((currPage) => currPage - 1);
@@ -58,7 +57,7 @@ function UserForm() {
           >
             Prev
           </button>
-          <button  style={{  padding:"0.5rem", margin:"0.5rem"}}
+          <button
             onClick={() => {
               if (page === FormTitles.length - 1) {
                 alert("FORM SUBMITTED");

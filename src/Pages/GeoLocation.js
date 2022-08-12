@@ -40,7 +40,7 @@ export default function GeoLocation(props) {
       const data = async () => {
         (await isCountry)
           ? geonames.countryInfo({}).then(res => {
-              console.log(res);
+              //console.log(res);
               setOptions(res.geonames);
             })
           : geonames.children({ geonameId: geoId }).then(res => {

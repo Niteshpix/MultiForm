@@ -6,18 +6,16 @@ import Select from "@mui/material/Select";
 import { Container, CssBaseline, Grid } from "@mui/material";
 import GeoLocation from "../Pages/GeoLocation";
 
-// const useStyles = makeStyles(theme => ({
-//   form: {
-//     width: "100%", // Fix IE 11 issue.
-//     marginTop: theme.spacing(3)
-//   }
-// }));
+
 
 export default function Educationinfo() {
-  const [age, setAge] = React.useState("");
+  const [college, setCollege] = React.useState("");
+  const [Qualification, setQualification] = React.useState("");
+
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    setCollege(event.target.value);
+    setQualification(event.target.value);
   };
 
   //const classes = useStyles();
@@ -33,35 +31,25 @@ export default function Educationinfo() {
 
   return (
     <div>
-<<<<<<< HEAD
-      <Container component="main" maxWidth="lg">
-=======
       <Container sx={{ m: 3 }} component="main" style={{margin:"auto" }} >
->>>>>>> a1ce96751ce8e51e1961814e52c5c7fd271cfb0b
         <CssBaseline />
         <div className={""}>
           <form className={""}>
             <Grid container spacing={2} style={{ display:"flex" }}>
-             
-<<<<<<< HEAD
-            <Grid item xs={12} sm={9}>
-                <FormControl sx={{ minWidth: 500 }}>
-=======
             <Grid item xs={12}  md={8}   >
                 <FormControl style={{width:"47.5rem"}} >
->>>>>>> a1ce96751ce8e51e1961814e52c5c7fd271cfb0b
                   <InputLabel>Your College*</InputLabel>
                   <Select
-                    value={age}
+                    value={college}
                     label="Your College"
                     onChange={handleChange}
                   >
                     <MenuItem value="">
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>Sddied</MenuItem>
+                    <MenuItem value={20}>Swami devi dyal group of professional</MenuItem>
+                    <MenuItem value={30}>Chandigarh university....</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
@@ -69,13 +57,13 @@ export default function Educationinfo() {
               <Grid item xs={12} md={4} >
                 <FormControl sx={{ minWidth: 355 }} style={{width:'23rem'}}>
                   <InputLabel>Your Qualification</InputLabel>
-                  <Select value={age} label="Your Qualification" onChange={handleChange}>
+                  <Select value={Qualification} label="Your Qualification" onChange={handleChange}>
                     <MenuItem value="">
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem value={10}>B.tech</MenuItem>
+                    <MenuItem value={20}>M.tech</MenuItem>
+                    <MenuItem value={30}>Mca</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
@@ -95,7 +83,7 @@ export default function Educationinfo() {
                 />
               </Grid>
 
-              <Grid item xs={6} sm={2}>
+              <Grid item xs={12} sm={4}>
                 <GeoLocation
                   locationTitle="City"
                   onChange={setCity}
