@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AddressInfo from "../Components/AddressInfo";
+
 import Educationinfo from "../Components/Educationinfo";
 import Information from "../Components/Information";
 import '../App.css'
@@ -17,26 +17,27 @@ function UserForm() {
     username: "",
     nationality: "",
     other: "",
+    College:"",
+    Qualification:""
     
   });
 
-  const FormTitles = ["Personal Information !!", "Education !!","Address !!", "Preview !!"];
+  const FormTitles = ["Personal Information !!", "Education !!", "Preview !!"];
 
   const PageDisplay = () => {
     if (page === 0) {
       return <Information valid={valid} setValid={setValid} formData={formData} setFormData={setFormData} />;
     } else if (page === 1) {
       return <Educationinfo formData={formData} setFormData={setFormData} />;
-    } else if(page === 2){
-      return <AddressInfo formData={formData} setFormData={setFormData} />;
-    }
+    } 
    
   };
-
+   
   return (
     <div className="App">
      
-    <div className="progressbar">
+    <div className="progressbar" style={{width:"400px", height:"10px", margin:"auto "}}>
+        
         <div
           style={{ width: page === 0 ? "25%" : page === 1 ? "50%" : page ===2 ? '75%': "100%" }}
         ></div>

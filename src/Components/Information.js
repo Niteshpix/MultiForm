@@ -54,7 +54,7 @@ function Information() {
               fullWidth
                 id="firstName"
                 label="FirstName"
-                name="FirstName"
+                name="firstName"
                 onChange={handleChange}
                 {...register("firstName", {
                   required: "First Name is required.",
@@ -78,7 +78,7 @@ function Information() {
               />
               <TextField
                 fullWidth
-                label="gmail"
+                label="email"
                 id="fullWidth"
                 name="email"
                 onChange={handleChange}
