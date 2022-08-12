@@ -1,3 +1,4 @@
+import React from 'react'
 import {
   Box,
   Button,
@@ -8,9 +9,9 @@ import {
   Radio,
   RadioGroup,
   TextField,
-  Typography,
+  
 } from "@mui/material";
-import React from "react";
+
 
 import { useForm } from "react-hook-form";
 
@@ -49,11 +50,7 @@ function Information() {
             }}
           >
             <Grid item xs={12} md={6}>
-              <Typography variant="h4" component="h2">
-                Information Details
-              </Typography>
               <TextField
-                style={{ marginRight: "22px", marginBottom: "10px" }}
                 id="firstName"
                 label="FirstName"
                 name="FirstName"
@@ -149,6 +146,7 @@ function Information() {
             Next
           </Button>
         </Box>
+
       </form>
     </div>
   );

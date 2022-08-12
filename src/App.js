@@ -1,9 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import AddressInfo from "./Components/AddressInfo";
 import Home from "./Components/Home";
-
-import Information from "./Components/Information";
+import UserForm from "./Pages/UserForm";
 
  
 function App() {
@@ -12,8 +10,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route exact path="/" element={<Home />} />
-          <Route path="/info" element={<Information />} />
-          <Route path="/Addressinfo" element={<AddressInfo />} />
+          <Route path="/info" element={<UserForm />} />
         </Routes>
       </BrowserRouter>
     </>
