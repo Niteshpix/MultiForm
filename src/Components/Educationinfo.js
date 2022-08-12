@@ -34,7 +34,6 @@ export default function Educationinfo() {
   return (
     <div>
       <Container sx={{ m: 3 }} component="main" maxWidth="lg">
-      <h1>Qualification !!</h1>
         <CssBaseline />
         <div className={""}>
           <form className={""}>

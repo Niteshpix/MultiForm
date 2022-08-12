@@ -1,7 +1,6 @@
 import React from 'react'
 import {
   Box,
-  Button,
   FormControl,
   FormControlLabel,
   FormLabel,
@@ -9,7 +8,7 @@ import {
   Radio,
   RadioGroup,
   TextField,
-  Typography,
+  
 } from "@mui/material";
 
 function Information() {
@@ -21,41 +20,19 @@ function Information() {
     setForm(e.target.value)
   };
 
-  return (
-     
-    <div>
+  return ( 
+    <div className=''>
       <form >
-        <Box
-          sx={{
-            width: 1000,
-            maxWidth: "100%",
-
-            margin: "auto",
-            border: "2px solid grey",
-            height: "60vh",
-          }}
-        >
-          <Grid
-            container
-            spacing={2}
-            style={{
-              marginTop: "20px",
-              margin: "auto",
-              justifyContent: "center",
-            }}
-          >
+        <Box>
+          <Grid container spacing={2} >
             <Grid item xs={12} md={6}>
-              <Typography variant="h4" component="h2">
-                Information Details
-              </Typography>
               <TextField
-                style={{ marginRight: "22px", marginBottom: "10px" }}
                 id="firstName"
                 label="FirstName"
                 name="FirstName"
                 onChange={handleChange}
                 error={form===""}
-              
+            
                 helperText={form === "" ? "Empty Filled!" : " "}
               />
               <TextField
@@ -103,8 +80,9 @@ function Information() {
             </Grid>
            
           </Grid>
-          <Button type="submit" style={{margin:"auto", display:"flex  "}}>Submit</Button>
+          {/*<Button type="submit" style={{margin:"auto", display:"flex  "}}>Submit</Button>*/}
         </Box>
+
       </form>
     </div>
   );

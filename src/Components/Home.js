@@ -10,7 +10,7 @@ function Home() {
   return (
     <Box className='App'>
     <h1>Welcome to Jobeefy</h1>
-   <Button variant="contained" color="success" onClick={() => navigate("/info")}>APPLY HERE !!</Button>
+    <Button variant="contained" color="success" onClick={() => navigate("/info")}>APPLY HERE !!</Button>
 
     </Box>
   )
