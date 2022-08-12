@@ -1,17 +1,20 @@
-import { Container } from '@mui/system';
-import './App.css';
-import Home from './Components/Home'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./App.css";
+import AddressInfo from "./Components/AddressInfo";
+import Home from "./Components/Home";
+
+import Information from "./Components/Information";
 
 function App() {
   return (
     <>
-    <Container>
-     <Home/>     
-
-
-    </Container>
- 
-    
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Home />} />
+          <Route path="/info" element={<Information />} />
+          <Route path="/Addressinfo" element={<AddressInfo />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
