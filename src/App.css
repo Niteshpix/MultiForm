@@ -3,5 +3,20 @@
   margin-top: 10%;
   margin-left: auto;
   margin-right: auto;
+  
 }
 
+* PROGRESS BAR */
+.progressbar {
+  width: 400px;
+  height: 10px;
+  background-color: white;
+  margin-bottom: 50px;
+  border:"2px solid red"
+  
+}
+.progressbar div {
+  width: 33.3%;
+  height: 100%;
+  background-color: rgb(255, 106, 0);
+}

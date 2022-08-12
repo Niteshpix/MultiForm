@@ -18,7 +18,7 @@ function Information({formData, setFormData}) {
   //      } = useForm();
   
   
-  console.log(formData)
+ // console.log(formData)
 
 
   return (
@@ -50,6 +50,7 @@ function Information({formData, setFormData}) {
                   setFormData({ ...formData, firstName: e.target.value });
                 }}
                 value={formData.firstName}
+                
 
                 // {...register("firstName", {
                 //   required: "First Name is required.",

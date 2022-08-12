@@ -8,20 +8,16 @@ import GeoLocation from "../Pages/GeoLocation";
 
 
 
-export default function Educationinfo() {
-  const [college, setCollege] = React.useState("");
-  const [Qualification, setQualification] = React.useState("");
 
-
-  const handleChange = (event) => {
-    setCollege(event.target.value);
-    setQualification(event.target.value);
-  };
+export default function Educationinfo({formData, setFormData}) {
 
   //const classes = useStyles();
   const [country, setCountry] = React.useState("");
   const [state, setState] = React.useState("");
   const [city, setCity] = React.useState("");
+  
+  console.log(formData)
+  
 
   console.log({
     country,
@@ -40,30 +36,35 @@ export default function Educationinfo() {
                 <FormControl style={{width:"47.5rem"}} >
                   <InputLabel>Your College*</InputLabel>
                   <Select
-                    value={college}
+                    value={formData.College}
+                    name="College"
                     label="Your College"
-                    onChange={handleChange}
+                    onChange={(e) => {
+                      setFormData({ ...formData, College: e.target.value });
+                    }}
+                  
                   >
-                    <MenuItem value="">
+                    <MenuItem name="College">
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>Sddied</MenuItem>
-                    <MenuItem value={20}>Swami devi dyal group of professional</MenuItem>
-                    <MenuItem value={30}>Chandigarh university....</MenuItem>
+                    <MenuItem value="Ten">Sddiet</MenuItem>
+                    <MenuItem value="Twenty">Panipat Uni</MenuItem>
+                    <MenuItem value="Thirty">Patana Uni</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
 
               <Grid item xs={12} md={4} >
-                <FormControl sx={{ minWidth: 355 }} style={{width:'23rem'}}>
-                  <InputLabel>Your Qualification</InputLabel>
-                  <Select value={Qualification} label="Your Qualification" onChange={handleChange}>
-                    <MenuItem value="">
+                <FormControl sx={{ minWidth: 355 }} style={{width:'23rem'}}>                  
+                  <Select value={formData.Qualification} label="Your Qualification" name="Qualification" onChange={(e) => {
+                      setFormData({ ...formData, Qualification: e.target.value });
+                    }}>
+                    <MenuItem value={formData.Qualification}>
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>B.tech</MenuItem>
-                    <MenuItem value={20}>M.tech</MenuItem>
-                    <MenuItem value={30}>Mca</MenuItem>
+                    <MenuItem value="B.tech">B.tech</MenuItem>
+                    <MenuItem value="M.tech">M.tech</MenuItem>
+                    <MenuItem value="BCA">BCA</MenuItem>
                   </Select>
                 </FormControl>
               </Grid>

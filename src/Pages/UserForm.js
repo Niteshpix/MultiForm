@@ -14,12 +14,12 @@ function UserForm() {
     email: "",
     gender:'',
     phone: "",
-    college:"",
+    College:"",
     Qualification:"",
     Country:"",
     State:"",
     City:""
-
+ 
   });
 
   const FormTitles = ["Personal Information !!", "Education !!", "Preview !!"];
@@ -30,12 +30,14 @@ function UserForm() {
     } else if (page === 1) {
       return <Educationinfo formData={formData} setFormData={setFormData} />;
     } 
+   
   };
-
+   
   return (
     <div className="App">
      
-    <div className="progressbar">
+    <div className="progressbar" style={{width:"400px", height:"10px", margin:"auto "}}>
+        
         <div
           style={{ width: page === 0 ? "25%" : page === 1 ? "50%" : page ===2 ? '75%': "100%" }}
         ></div>
