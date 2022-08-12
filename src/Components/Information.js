@@ -74,7 +74,7 @@ function Information() {
               />
               <TextField
                 fullWidth
-                label="gmail"
+                label="Email"
                 id="fullWidth"
                 name="email"
                 onChange={handleChange}

@@ -33,14 +33,14 @@ export default function Educationinfo() {
 
   return (
     <div>
-      <Container sx={{ m: 3 }} component="main" maxWidth="lg">
+      <Container component="main" maxWidth="lg">
         <CssBaseline />
         <div className={""}>
           <form className={""}>
             <Grid container spacing={2}>
              
-            <Grid item xs={12} sm={8}>
-                <FormControl sx={{ minWidth: 730 }}>
+            <Grid item xs={12} sm={9}>
+                <FormControl sx={{ minWidth: 500 }}>
                   <InputLabel>Your College*</InputLabel>
                   <Select
                     value={age}
@@ -86,7 +86,7 @@ export default function Educationinfo() {
                 />
               </Grid>
 
-              <Grid item xs={12} sm={4}>
+              <Grid item xs={6} sm={2}>
                 <GeoLocation
                   locationTitle="City"
                   onChange={setCity}
