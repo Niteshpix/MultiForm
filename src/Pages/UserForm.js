@@ -49,8 +49,8 @@ function UserForm() {
         </div>
         <div className="body">{PageDisplay()}</div>
        
-        <div className="footer">
-          <button
+        <div className="footer" style={{ margin:"2rem", padding:"2rem"}}>
+          <button style={{  padding:"0.5rem"}}
             disabled={page === 0}
             onClick={() => {
               setPage((currPage) => currPage - 1);
@@ -58,7 +58,7 @@ function UserForm() {
           >
             Prev
           </button>
-          <button
+          <button  style={{  padding:"0.5rem", margin:"0.5rem"}}
             onClick={() => {
               if (page === FormTitles.length - 1) {
                 alert("FORM SUBMITTED");

@@ -33,14 +33,23 @@ export default function Educationinfo() {
 
   return (
     <div>
+<<<<<<< HEAD
       <Container component="main" maxWidth="lg">
+=======
+      <Container sx={{ m: 3 }} component="main" style={{margin:"auto" }} >
+>>>>>>> a1ce96751ce8e51e1961814e52c5c7fd271cfb0b
         <CssBaseline />
         <div className={""}>
           <form className={""}>
-            <Grid container spacing={2}>
+            <Grid container spacing={2} style={{ display:"flex" }}>
              
+<<<<<<< HEAD
             <Grid item xs={12} sm={9}>
                 <FormControl sx={{ minWidth: 500 }}>
+=======
+            <Grid item xs={12}  md={8}   >
+                <FormControl style={{width:"47.5rem"}} >
+>>>>>>> a1ce96751ce8e51e1961814e52c5c7fd271cfb0b
                   <InputLabel>Your College*</InputLabel>
                   <Select
                     value={age}
@@ -57,8 +66,8 @@ export default function Educationinfo() {
                 </FormControl>
               </Grid>
 
-              <Grid item xs={12} sm={3}>
-                <FormControl sx={{ minWidth: 355 }}>
+              <Grid item xs={12} md={4} >
+                <FormControl sx={{ minWidth: 355 }} style={{width:'23rem'}}>
                   <InputLabel>Your Qualification</InputLabel>
                   <Select value={age} label="Your Qualification" onChange={handleChange}>
                     <MenuItem value="">
