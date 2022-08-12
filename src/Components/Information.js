@@ -37,20 +37,21 @@ function Information() {
             width: 1000,
             maxWidth: "100%",
             margin: "auto",
-            height: "60vh",
+            
           }}
         >
           <Grid
             container
             spacing={2}
             style={{
-              marginTop: "20px",
+              marginTop: "30px",
               margin: "auto",
               justifyContent: "center",
             }}
           >
-            <Grid item xs={12} md={6}>
+            <Grid item xs={12} md={6} >
               <TextField
+              fullWidth
                 id="firstName"
                 label="FirstName"
                 name="FirstName"
@@ -60,8 +61,10 @@ function Information() {
                 })}
                 error={Boolean(errors.firstName)}
                 helperText={errors.firstName?.message}
+              
               />
               <TextField
+              fullWidth
                 id="LastName"
                 label="LastName"
                 name="lastName"
@@ -71,6 +74,7 @@ function Information() {
                 })}
                 error={Boolean(errors.lastName)}
                 helperText={errors.lastName?.message}
+                style={{marginTop:"10px"}}
               />
               <TextField
                 fullWidth
@@ -83,12 +87,13 @@ function Information() {
                 })}
                 error={Boolean(errors.email)}
                 helperText={errors.email?.message}
+                style={{marginTop:"10px"}}
               />
-              <FormControl>
-                <FormLabel id="demo-radio-buttons-group-label">
+              <FormControl style={{ display:'flex' }} >
+                <FormLabel id="demo-radio-buttons-group-label" style={{ display:'flex' }}>
                   Gender
                 </FormLabel>
-                <RadioGroup
+                <RadioGroup 
                   aria-labelledby="demo-radio-buttons-group-label"
                   defaultValue="female"
                   name="gender"
@@ -115,17 +120,7 @@ function Information() {
                     }
                     label="Male"
                   />
-                  <FormControlLabel
-                    value="other"
-                    control={
-                      <Radio
-                        {...register("gender", {
-                          required: "Choose your gender",
-                        })}
-                      />
-                    }
-                    label="other"
-                  />
+                  
                 </RadioGroup>
               </FormControl>
               <TextField
